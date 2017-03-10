@@ -27,8 +27,8 @@ public:
   virtual void  BeginOfEventAction(const G4Event* event);
   virtual void    EndOfEventAction(const G4Event* event);
 
-  void FindEnergy1(G4double ke);
-  void FindEnergy2(G4double ke);
+  // void FindEnergy1(G4double ke);
+  // void FindEnergy2(G4double ke);
     
 private:
   // methods
@@ -58,11 +58,11 @@ private:
   G4int  fScint19HCID;
   G4int  fScint20HCID;
 
-  G4double fTest1, fTest2;
+  // G4double fTest1, fTest2;
 };
 
-inline void B4cEventAction::FindEnergy1(G4double ke) { fTest1 += ke; }
-inline void B4cEventAction::FindEnergy2(G4double ke) { fTest2 += ke; }
+// inline void B4cEventAction::FindEnergy1(G4double ke) { fTest1 += ke; }
+// inline void B4cEventAction::FindEnergy2(G4double ke) { fTest2 += ke; }
                      
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

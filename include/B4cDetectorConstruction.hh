@@ -41,8 +41,8 @@ class B4cDetectorConstruction : public G4VUserDetectorConstruction
     const G4VPhysicalVolume* GetTest1PV() const;
     const G4VPhysicalVolume* GetTest2PV() const;
 
-    G4VPhysicalVolume*  fTest1;
-    G4VPhysicalVolume*  fTest2;
+    // G4VPhysicalVolume*  fTest1;
+    // G4VPhysicalVolume*  fTest2;
 
   private:
     // methods
@@ -58,8 +58,8 @@ class B4cDetectorConstruction : public G4VUserDetectorConstruction
     G4bool  fCheckOverlaps; // option to activate checking of volumes overlaps
 };
 
-inline const G4VPhysicalVolume* B4cDetectorConstruction::GetTest1PV() const { return fTest1; }
-inline const G4VPhysicalVolume* B4cDetectorConstruction::GetTest2PV() const { return fTest2; }
+// inline const G4VPhysicalVolume* B4cDetectorConstruction::GetTest1PV() const { return fTest1; }
+// inline const G4VPhysicalVolume* B4cDetectorConstruction::GetTest2PV() const { return fTest2; }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

@@ -48,8 +48,8 @@ B4RunAction::B4RunAction()
   analysisManager->CreateH1("Scint9","Edep in Scint9", 500, lowbound, upbound);
   analysisManager->CreateH1("Scint10","Edep in Scint10", 500, lowbound, upbound);
 
-  analysisManager->CreateH1("Test1","Kinetic Energy in Plane 1", 500, 0., 100*MeV);
-  analysisManager->CreateH1("Test2","Kinetic Energy in Plane 2", 500, 0., 100*MeV);
+  // analysisManager->CreateH1("Test1","Kinetic Energy in Plane 1", 500, 0., 100*MeV);
+  // analysisManager->CreateH1("Test2","Kinetic Energy in Plane 2", 500, 0., 100*MeV);
 
   // Creating ntuple
   analysisManager->CreateNtuple("NewDetector", "Edep and Pos");
