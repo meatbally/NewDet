@@ -24,9 +24,9 @@ B4cEventAction::B4cEventAction()
    fScint1HCID(-1), fScint2HCID(-1), fScint3HCID(-1), fScint4HCID(-1), fScint5HCID(-1),
    fScint6HCID(-1), fScint7HCID(-1), fScint8HCID(-1), fScint9HCID(-1), fScint10HCID(-1),
    fScint11HCID(-1), fScint12HCID(-1), fScint13HCID(-1), fScint14HCID(-1), fScint15HCID(-1),
-   fScint16HCID(-1), fScint17HCID(-1), fScint18HCID(-1), fScint19HCID(-1), fScint20HCID(-1),
+   fScint16HCID(-1), fScint17HCID(-1), fScint18HCID(-1), fScint19HCID(-1), fScint20HCID(-1)
 
-   fTest1(0.), fTest2(0.)
+   //fTest1(0.), fTest2(0.)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -78,8 +78,8 @@ B4cEventAction::GetHitsCollection(G4int hcID,
 
 void B4cEventAction::BeginOfEventAction(const G4Event* /*event*/)
 {
-  fTest1 = 0;
-  fTest1 = 0;
+  // fTest1 = 0;
+  // fTest1 = 0;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -191,8 +191,8 @@ void B4cEventAction::EndOfEventAction(const G4Event* event)
   analysisManager->FillH1(9, Scint9Hit->GetEdep());
   analysisManager->FillH1(10, Scint10Hit->GetEdep());
 
-  analysisManager->FillH1(11, fTest1);
-  analysisManager->FillH1(12, fTest2);
+  // analysisManager->FillH1(11, fTest1);
+  // analysisManager->FillH1(12, fTest2);
 
   //G4double SiPM3Time = SiPM3Hit->GetTime();
   //G4double ScintTime = ScintHit->GetTime();

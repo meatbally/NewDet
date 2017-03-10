@@ -18,9 +18,9 @@
 
 B4cDetectorConstruction::B4cDetectorConstruction()
  : G4VUserDetectorConstruction(),
-   fCheckOverlaps(true),
-   fTest1(0),
-   fTest2(0)
+   fCheckOverlaps(true)
+   // fTest1(0),
+   // fTest2(0)
 {
 }
 
@@ -100,15 +100,15 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
     = new G4PVPlacement(0,G4ThreeVector(),worldLV,"World",0,false,0,fCheckOverlaps);
 
   // To Record Energy
-  G4Box* testSolid = new G4Box("TestSolid", 15.*cm, 15.*cm, 0.15*mm);
-  G4LogicalVolume* testLog1 = new G4LogicalVolume(testSolid, air, "TestLog1");
-  G4LogicalVolume* testLog2 = new G4LogicalVolume(testSolid, air, "TestLog2");
-  G4ThreeVector test1Pos = G4ThreeVector(0*cm, 0*cm, 15*cm);
-  G4ThreeVector test2Pos = G4ThreeVector(0*cm, 0*cm, 30*cm);
-  fTest1 = 
-  new G4PVPlacement(0, test1Pos, testLog1, "testPhys1", worldLV, false, 0, fCheckOverlaps);
-  fTest2 = 
-  new G4PVPlacement(0, test2Pos, testLog2, "testPhys2", worldLV, false, 0, fCheckOverlaps);
+  // G4Box* testSolid = new G4Box("TestSolid", 15.*cm, 15.*cm, 0.15*mm);
+  // G4LogicalVolume* testLog1 = new G4LogicalVolume(testSolid, air, "TestLog1");
+  // G4LogicalVolume* testLog2 = new G4LogicalVolume(testSolid, air, "TestLog2");
+  // G4ThreeVector test1Pos = G4ThreeVector(0*cm, 0*cm, 15*cm);
+  // G4ThreeVector test2Pos = G4ThreeVector(0*cm, 0*cm, 30*cm);
+  // fTest1 = 
+  // new G4PVPlacement(0, test1Pos, testLog1, "testPhys1", worldLV, false, 0, fCheckOverlaps);
+  // fTest2 = 
+  // new G4PVPlacement(0, test2Pos, testLog2, "testPhys2", worldLV, false, 0, fCheckOverlaps);
 
   // Scintillators
   G4double gap = 12.5*mm;
