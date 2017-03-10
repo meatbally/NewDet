@@ -50,6 +50,8 @@ void B4cDetectorConstruction::DefineMaterials()
   nistManager->FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
   nistManager->FindOrBuildMaterial("G4_SILICON_DIOXIDE");
   nistManager->FindOrBuildMaterial("G4_Pb");
+  nistManager->FindOrBuildMaterial("G4_GLASS_LEAD");
+
 
  // Tedlar material
   G4Element* C = new G4Element("Carbon"  , "C", 6., 12.011*g/mole);
@@ -68,7 +70,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
   // World Geometry
   G4double worldSizeX = 100*cm;
   G4double worldSizeY = 100*cm;
-  G4double worldSizeZ = 150*cm; 
+  G4double worldSizeZ = 282*cm; 
 
   // rotation matrix
   G4double theta = 0.8593722*deg, phi = 0.*deg;
@@ -89,6 +91,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
   // G4Material* glass = G4Material::GetMaterial("G4_SILICON_DIOXIDE");
   G4Material* plastic = G4Material::GetMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
   //G4Material* Tedlar = G4Material::GetMaterial("PolyvinylFluoride");
+  G4Material* leadglass = G4Material::GetMaterial("G4_GLASS_LEAD");
       
   // World
   G4VSolid* worldS = new G4Box("World",worldSizeX/2, worldSizeY/2, worldSizeZ/2); 
@@ -233,6 +236,13 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
   new G4PVPlacement(0, lead18, leadLog18, "LEAD18", worldLV, false, 0, fCheckOverlaps);
   new G4PVPlacement(0, lead19, leadLog19, "LEAD19", worldLV, false, 0, fCheckOverlaps);
   new G4PVPlacement(0, lead20, leadLog20, "LEAD20", worldLV, false, 0, fCheckOverlaps);
+
+  //Lead Glass
+  G4Box* leadGlass = new G4Box("LeadGlass", 15*cm, 15*cm, 10*cm);
+  G4LogicalVolume* leadglassLog1 = new G4LogicalVolume(leadGlass, leadglass, "LeadGlasslog1");
+  G4ThreeVector leadglass1 = G4ThreeVector(0*cm, 0*cm, -610*mm);
+  new G4PVPlacement(0, leadglass1, leadglassLog1, "LeadGlass1", worldLV, false, 0, fCheckOverlaps);
+
 
   // Return the physical World
   return worldPV;
