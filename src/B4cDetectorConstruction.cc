@@ -254,63 +254,83 @@ void B4cDetectorConstruction::ConstructSDandField()
 {
   // Sensitive detectors
   B4cDetectorSD* Scint1 = new B4cDetectorSD("SCINT1SD", "Scint1HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint1);
   SetSensitiveDetector("Scintlog1", Scint1);
 
   B4cDetectorSD* Scint2 = new B4cDetectorSD("SCINT2SD", "Scint2HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint2);
   SetSensitiveDetector("Scintlog2", Scint2);
 
   B4cDetectorSD* Scint3 = new B4cDetectorSD("SCINT3SD", "Scint3HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint3);
   SetSensitiveDetector("Scintlog3", Scint3);
 
   B4cDetectorSD* Scint4 = new B4cDetectorSD("SCINT4SD", "Scint4HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint4);
   SetSensitiveDetector("Scintlog4", Scint4);
 
   B4cDetectorSD* Scint5 = new B4cDetectorSD("SCINT5SD", "Scint5HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint5);
   SetSensitiveDetector("Scintlog5", Scint5);
 
   B4cDetectorSD* Scint6 = new B4cDetectorSD("SCINT6SD", "Scint6HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint6);
   SetSensitiveDetector("Scintlog6", Scint6);
 
   B4cDetectorSD* Scint7 = new B4cDetectorSD("SCINT7SD", "Scint7HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint7);
   SetSensitiveDetector("Scintlog7", Scint7);
 
   B4cDetectorSD* Scint8 = new B4cDetectorSD("SCINT8SD", "Scint8HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint8);
   SetSensitiveDetector("Scintlog8", Scint8);
 
   B4cDetectorSD* Scint9 = new B4cDetectorSD("SCINT9SD", "Scint9HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint9);
   SetSensitiveDetector("Scintlog9", Scint9);
 
   B4cDetectorSD* Scint10 = new B4cDetectorSD("SCINT10SD", "Scint10HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint10);
   SetSensitiveDetector("Scintlog10", Scint10);
 
   B4cDetectorSD* Scint11 = new B4cDetectorSD("SCINT11SD", "Scint11HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint11);
   SetSensitiveDetector("Scintlog11", Scint11);
 
   B4cDetectorSD* Scint12 = new B4cDetectorSD("SCINT12SD", "Scint12HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint12);
   SetSensitiveDetector("Scintlog12", Scint12);
 
   B4cDetectorSD* Scint13 = new B4cDetectorSD("SCINT13SD", "Scint13HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint13);
   SetSensitiveDetector("Scintlog13", Scint13);
 
   B4cDetectorSD* Scint14 = new B4cDetectorSD("SCINT14SD", "Scint14HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint14);
   SetSensitiveDetector("Scintlog14", Scint14);
 
   B4cDetectorSD* Scint15 = new B4cDetectorSD("SCINT15SD", "Scint15HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint15);
   SetSensitiveDetector("Scintlog15", Scint15);
 
   B4cDetectorSD* Scint16 = new B4cDetectorSD("SCINT16SD", "Scint16HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint16);
   SetSensitiveDetector("Scintlog16", Scint16);
 
   B4cDetectorSD* Scint17 = new B4cDetectorSD("SCINT17SD", "Scint17HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint17);
   SetSensitiveDetector("Scintlog17", Scint17);
 
   B4cDetectorSD* Scint18 = new B4cDetectorSD("SCINT18SD", "Scint18HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint18);
   SetSensitiveDetector("Scintlog18", Scint18);
 
   B4cDetectorSD* Scint19 = new B4cDetectorSD("SCINT19SD", "Scint19HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint19);
   SetSensitiveDetector("Scintlog19", Scint19);
 
   B4cDetectorSD* Scint20 = new B4cDetectorSD("SCINT20SD", "Scint20HitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(Scint20);
   SetSensitiveDetector("Scintlog20", Scint20);
 
   // B4cDetectorSD* Test1 = new B4cDetectorSD("TEST1SD", "Test1HitsCollection");
